@@ -1,0 +1,52 @@
+{
+  "issues": [
+    "Immigration",
+    "Reproductive Rights",
+    "LGBTQ",
+    "Native American Rights",
+    "Black Lives Matter",
+    "Capitalist Resistance"
+  ],
+  "engagement": [
+    "Education",
+    "Donation",
+    "Activism"
+  ],
+  "resources": [
+    {
+      "name": "The Future We Want",
+      "issue": "Capitalist Resistance",
+      "engagement": "Education",
+      "url": "https://www.amazon.com/dp/B00F8GKFUG/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
+    },
+    {
+      "name": "Necessary Trouble",
+      "issue": "Capitalist Resistance",
+      "engagement": "Education",
+      "url": "https://www.amazon.com/dp/B01DWWOLVG/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1"
+    },
+    {
+      "name": "Black Lives Matter Syllabus",
+      "issue": "Black Lives Matter",
+      "engagement": "Education",
+      "url": "http://www.blacklivesmattersyllabus.com/"
+    },
+    {
+      "name": "Immigration Defense Project",
+      "issue": "Immigration",
+      "engagement": "Donation",
+      "url": "http://www.immdefense.org/"
+    },
+    {
+      "name": "Planned Parenthood",
+      "issue": "Reproductive Rights",
+      "engagement": "Donation",
+      "url": "https://www.plannedparenthood.org/"
+    },
+    {
+      "name": "Showing Up for Racial Justice",
+      "issue": "Black Lives Matter",
+      "engagement": "Activism"
+    }
+  ]
+}

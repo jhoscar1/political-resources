@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>Political Resources</title>
+	</head>
+	<body>
+    <h1>Resources for engaging with important issues in the wake of the election</h1>
+		<h2>What issue do you want to engage with?</h2>
+    <% issues.forEach(function(issue) {%>
+			<div class="issue">
+				<h3><%= issue %></h3>
+			</div>
+		<% }) %>
+	</body>
+</html>
