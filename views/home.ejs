@@ -7,7 +7,7 @@
 		<h2>How do you want to get involved?</h2>
     <% engagement.forEach(function(engage) {%>
 			<div class="engage">
-				<h3><%= engage %></h3>
+				<h3><a href="/<%= engage.toLowerCase() %>"> <%= engage %></a></h3>
 			</div>
 		<% }) %>
 	</body>
