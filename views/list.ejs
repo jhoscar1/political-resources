@@ -1,0 +1,6 @@
+<% include partials/header.ejs %>
+<h2>Check these Resources Out:</h2>
+<% resources.forEach(function(resource) { %>
+  <h3><a target="_blank" href="<%= resource.url %>"><%= resource.name %></a></h3>
+<% }) %>
+<% include partials/footer.ejs %>

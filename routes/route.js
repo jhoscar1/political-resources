@@ -9,23 +9,35 @@ router.get('/', function(req, res) {
 router.get('/:engagement', function(req, res) {
   var query = req.params.engagement;
   var list = [];
+  var uniqueList = [];
   //Determine what issues have this type of engagement
   data.resources.forEach(function(resource) {
     if (resource.engagement.toLowerCase() == query) {
       var url = resource.issue
                 .toLowerCase()
                 .replace(/ /g,'-');
-      var issue = {name: resource.issue, link: url}
-      list.push(issue);
+      var issueName = resource.issue;
+      list.push(issueName);
     }
   });
-  res.render('issue', {issues: list, engagement: query})
+
+  list.filter(function(el, index, self) {
+    return self.indexOf(el) == index;
+  }).forEach(function(issue) {
+    var url = issue
+              .toLowerCase()
+              .replace(/ /g,'-');
+    var issueData = {name: issue, link: url};
+    uniqueList.push(issueData);
+  });
+
+  res.render('issue', {issues: uniqueList, engagement: query})
 });
 
 router.get('/:engagement/:issue', function(req, res) {
-  var issueQuery = req.params.issue;
+  var issueQuery = req.params.issue
+                   .replace(/-/g,' ');
   var engagementQuery = req.params.engagement
-                        .replace(/-/g,' ');
   var list = [];
   data.resources.forEach(function(resource){
     if (issueQuery == resource.issue.toLowerCase() && engagementQuery == resource.engagement.toLowerCase()) {
